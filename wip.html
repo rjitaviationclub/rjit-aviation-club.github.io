@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RJIT Aviation Club</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f9fa; color: #000; transition: background 0.3s, color 0.3s; }
+    header { padding: 15px; display: flex; align-items: center; justify-content: center; gap: 20px; }
+    header img:first-child { border-radius: 50%; width: 80px; height: 80px; }
+   header img:last-child { 
+    width: 1100px;       /* Recommended width */
+    height: 160px;      /* Recommended height */
+    max-width: 40%;     /* Still responsive — won’t overflow small screens */
+    object-fit: cover;
+}
+
+    nav { margin-bottom: 20px; }
+    section { background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px; }
+    footer { background: #222; color: #fff; text-align: center; padding: 15px 0; margin-top: 30px; }
+    .dark-mode { background: #121212; color: #e0e0e0; }
+    .dark-mode section { background: #1e1e1e; border: 1px solid #444; }
+    .dark-mode nav { background: #1e1e1e !important; }
+    .dark-mode footer { background: #000; }
+  </style>
+</head>
+<body>
+
+  <!-- Header with circular + rectangular logo -->
+  <header>
+    <img src="logo-circle.png" alt="Club Logo">
+    <img src="logo-rect1.png" alt="Club Rectangular Logo" width="960" height="160" style="object-fit: contain;">
+
+
+  </header>
+
+  <!-- Navbar -->
+  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000; border-radius: 8px; padding: 0 15px;">
+      <div class="container-fluid p-0">
+
+
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav d-flex" style="gap: 40px;">
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://rjitaviaitionclub.blogspot.com/p/home.html" target="_blank">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Member Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> 
+           
+       <!--  <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="events.html">Events</a></li>
+              <li><a class="dropdown-item" href="team.html">Team</a></li>
+              <li><a class="dropdown-item" href="https://rjitaviaitionclub.blogspot.com/p/home.html" target="_blank">Blog</a></li>
+              <li><a class="dropdown-item" href="resources.html">Member Resources</a></li>
+              <li><a class="dropdown-item" href="contact.html">Contact</a></li> /*
+            </ul>
+          </li>-->
+        </ul>
+      </div>
+    </div> 
+  </nav>
+
+  <!-- Body Sections -->
+<div class="container">
+  <section class="text-center">
+    <h1 style="font-size: 5rem; font-weight: bold; margin-bottom: 20px;">W.I.P.</h1>
+    <img src="wip-image.png" alt="Work in Progress" style="max-width: 100%; height: auto;">
+  </section>
+</div>
+
+
+  <!-- Footer with dark mode toggle -->
+  <footer>
+    <p>© 2025 RJIT Aviation Club</p>
+    <button class="btn btn-secondary btn-sm" id="darkToggle">Toggle Dark Mode</button>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("darkToggle").addEventListener("click", function() {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>
