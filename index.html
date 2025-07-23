@@ -9,7 +9,12 @@
     body { font-family: Arial, sans-serif; background: #f8f9fa; color: #000; transition: background 0.3s, color 0.3s; }
     header { padding: 15px; display: flex; align-items: center; justify-content: center; gap: 20px; }
     header img:first-child { border-radius: 50%; width: 80px; height: 80px; }
-    header img:last-child { height: 80px; width: 40%; object-fit: contain; }
+    header img:last-child { 
+    width: 40%; 
+    height: 80px; 
+    object-fit: cover; /* Fills the space neatly */
+}
+
     nav { margin-bottom: 20px; }
     section { background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px; }
     footer { background: #222; color: #fff; text-align: center; padding: 15px 0; margin-top: 30px; }
