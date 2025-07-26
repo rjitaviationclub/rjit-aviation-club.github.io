@@ -129,15 +129,7 @@ header {
   </nav>
 
 
-    <script>
-  // Highlight active page
-  const currentPage = window.location.pathname;
-  document.querySelectorAll('.navbar .nav-link').forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
-      link.classList.add('active');
-    }
-  });
-</script>
+
 
   <!-- Body Sections -->
 <div class="container">
@@ -174,5 +166,16 @@ header {
       document.body.classList.toggle("dark-mode");
     });
   </script>
+
+    <script>
+  // Highlight active page
+  const currentPage = window.location.pathname;
+  document.querySelectorAll('.navbar .nav-link').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+</script>
+    
 </body>
 </html>
