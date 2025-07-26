@@ -76,6 +76,22 @@ header {
 }
 
 
+
+header .circle-logo {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  header .circle-logo {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+
+    
     
     nav { margin-bottom: 20px; }
     section { background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px; }
@@ -116,9 +132,9 @@ header {
 
   <!-- Header with circular + rectangular logo -->
   <header>
-    <img src="/rjit-aviation-club.github.io/logos/logo-circle.png" alt="Club Logo">
+    <img class="circle-logo" src="/rjit-aviation-club.github.io/logos/logo-circle.png" alt="Club Logo">
     <img src="/rjit-aviation-club.github.io/logos/banner3.png" alt="Club Rectangular Logo" width="960" height="160" style="object-fit: contain;">
-    <img src="/rjit-aviation-club.github.io/logos/bsflogo2.png" alt="Partner Logo" style="width:80px; height:80px; border-radius:50%; object-fit:cover;">
+    <img class="circle-logo" src="/rjit-aviation-club.github.io/logos/bsflogo2.png" alt="Partner Logo" style="width:80px; height:80px; border-radius:50%; object-fit:cover;">
 
 
   </header>
