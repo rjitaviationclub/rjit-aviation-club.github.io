@@ -33,38 +33,44 @@ header {
     object-fit: contain;
   }
 
-/* Mobile view: put circular logos above banner */
+/* Mobile view: put circular logos above banner neatly */
 @media (max-width: 768px) {
   header {
-    flex-direction: column; /* stack vertically */
+    flex-direction: column;
     align-items: center;
     position: relative;
+    padding-top: 80px; /* extra top space for logos */
   }
 
-  /* Position logos above banner */
+  /* Position logos properly */
   header img:first-child,
   header img:last-child {
     position: absolute;
-    top: -30px; 
+    top: 10px; /* bring them fully inside view */
     width: 60px;
     height: 60px;
+    background: #fff; /* optional: gives a clean background */
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    z-index: 2;
   }
 
   /* Left logo */
   header img:first-child {
-    left: 10px;
+    left: 15px;
   }
 
   /* Right logo */
   header img:last-child {
-    right: 10px;
+    right: 15px;
   }
 
-  /* Banner stays centered */
+  /* Banner centered below logos */
   header img:nth-child(2) {
     max-width: 300px;
     position: relative;
     z-index: 1;
+    margin-top: 20px; /* spacing from logos */
   }
 }
 
