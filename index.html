@@ -33,24 +33,40 @@ header {
     object-fit: contain;
   }
 
-  /* Mobile view: put circular logos above banner */
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column; /* stack them vertically */
-    }
-
-    header img:first-child,
-    header img:last-child {
-      order: -1; /* move these before the banner */
-      width: 60px;
-      height: 60px;
-    }
-
-    header img:nth-child(2) {
-      order: 0; /* banner stays after logos */
-      max-width: 300px;
-    }
+/* Mobile view: put circular logos above banner */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    position: relative;
   }
+
+  /* Position logos above banner */
+  header img:first-child,
+  header img:last-child {
+    position: absolute;
+    top: -30px; 
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Left logo */
+  header img:first-child {
+    left: 10px;
+  }
+
+  /* Right logo */
+  header img:last-child {
+    right: 10px;
+  }
+
+  /* Banner stays centered */
+  header img:nth-child(2) {
+    max-width: 300px;
+    position: relative;
+    z-index: 1;
+  }
+}
 
     
     nav { margin-bottom: 20px; }
