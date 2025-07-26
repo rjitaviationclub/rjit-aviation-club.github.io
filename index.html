@@ -32,47 +32,49 @@ header {
     height: auto;
     object-fit: contain;
   }
-
-/* Mobile view: put circular logos above banner neatly */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding-top: 80px; /* extra top space for logos */
+    padding-top: 100px; /* create space for floating logos */
   }
 
-  /* Position logos properly */
-  header img:first-child,
-  header img:last-child {
+  /* RJIT logo (left) */
+  header img:first-child {
     position: absolute;
-    top: 10px; /* bring them fully inside view */
-    width: 60px;
-    height: 60px;
-    background: #fff; /* optional: gives a clean background */
+    top: 10px;       /* above the banner */
+    left: 20px;      /* a bit inward */
+    width: 65px;
+    height: 65px;
+    background: #fff;
     border: 2px solid #ddd;
     border-radius: 50%;
-    z-index: 2;
+    z-index: 3;
   }
 
-  /* Left logo */
-  header img:first-child {
-    left: 15px;
-  }
-
-  /* Right logo */
+  /* BSF logo (right) */
   header img:last-child {
-    right: 15px;
+    position: absolute;
+    top: 10px;       /* same height as RJIT */
+    right: 20px;     /* a bit inward */
+    width: 65px;
+    height: 65px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    z-index: 3;
   }
 
-  /* Banner centered below logos */
+  /* Banner stays centered below */
   header img:nth-child(2) {
     max-width: 300px;
     position: relative;
     z-index: 1;
-    margin-top: 20px; /* spacing from logos */
+    margin-top: 40px;
   }
 }
+
 
     
     nav { margin-bottom: 20px; }
