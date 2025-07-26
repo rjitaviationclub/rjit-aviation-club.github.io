@@ -190,9 +190,9 @@ header {
   });
 
   // Highlight active page
-  const currentPage = window.location.pathname.replace(/\/$/, "index.html"); // Treat "/" as "index.html"
-  document.querySelectorAll('.navbar .nav-link').forEach(link => {
-    let linkPath = link.getAttribute('href');
+  const currentPage = window.location.pathname.split("/").pop() || "index.html"; 
+  document.querySelectorAll('.navbar .nav-link, .navbar-brand').forEach(link => {
+    let linkPath = link.getAttribute('href').split("/").pop();
     if (linkPath === currentPage) {
       link.classList.add('active');
     }
