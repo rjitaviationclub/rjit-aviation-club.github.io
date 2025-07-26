@@ -73,6 +73,21 @@
   color: #0d6efd; /* Bootstrap blue */
   transition: color 0.3s;
 }
+
+    /* Navbar links - hover & active */
+.navbar .nav-link {
+  color: #ddd;
+  transition: all 0.3s ease;
+}
+.navbar .nav-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.navbar .nav-link.active {
+  color: #0d6efd !important;
+  font-weight: bold;
+  border-bottom: 2px solid #0d6efd;
+}
     
   </style>
 </head>
@@ -115,6 +130,16 @@
       </div>
       </div> 
   </nav>
+
+    <script>
+  // Highlight active page
+  const currentPage = window.location.pathname;
+  document.querySelectorAll('.navbar .nav-link').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+</script>
 
     
   <!-- Body Sections -->
