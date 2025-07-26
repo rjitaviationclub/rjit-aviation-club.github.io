@@ -81,6 +81,28 @@
       </div> 
   </nav>
 
+
+    <script>
+  function resizeIframe() {
+    var iframe = document.getElementById('blogFrame');
+    try {
+      var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+      iframe.style.height = iframeDoc.body.scrollHeight + 'px';
+    } catch (e) {
+      // If cross-origin blocks height calculation, set a fallback based on device
+      if (window.innerWidth < 768) { 
+        iframe.style.height = "3000px";  // Mobile
+      } else if (window.innerWidth < 1200) { 
+        iframe.style.height = "2500px";  // Tablet
+      } else {
+        iframe.style.height = "2000px";  // Desktop
+      }
+    }
+  }
+
+  document.getElementById('blogFrame').onload = resizeIframe;
+  window.addEventListener('resize', resizeIframe);
+</script>
   <!-- Body Sections -->
 <!-- Embedded Blog Section -->
 <div class="container">
