@@ -1,3 +1,6 @@
+![racstar](https://github.com/user-attachments/assets/d0fb3854-a50f-4913-aa40-c2efe2c8dfb5)
+
+
 This is the repository for the RJIT Aviation Club's (R.A.C) Github pages website.
 
 Until I.N.T can source a PC to host our own website, this repo will stay public as we are using Github pages for free.
